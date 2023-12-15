@@ -1,0 +1,286 @@
+{
+	"info": {
+		"_postman_id": "a704ed0c-b58c-4727-bf5f-1ac4f5460ed2",
+		"name": "Theo_Saelens_API_sans_framework",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26009214"
+	},
+	"item": [
+		{
+			"name": "classe",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/Theo_Saelens_TP_API_Rest_sans_framework/classe",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"Theo_Saelens_TP_API_Rest_sans_framework",
+						"classe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "classe/id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/Theo_Saelens_TP_API_Rest_sans_framework/classe/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"Theo_Saelens_TP_API_Rest_sans_framework",
+						"classe",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "student",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/Theo_Saelens_TP_API_Rest_sans_framework/student",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"Theo_Saelens_TP_API_Rest_sans_framework",
+						"student"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "student/id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/Theo_Saelens_TP_API_Rest_sans_framework/student/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"Theo_Saelens_TP_API_Rest_sans_framework",
+						"student",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post class",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"4\",\r\n    \"name\": \"Nouvelle classe\",\r\n    \"level\": \"B4\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/Theo_Saelens_TP_API_Rest_sans_framework/classe",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"Theo_Saelens_TP_API_Rest_sans_framework",
+						"classe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post student",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"4\",\r\n    \"lastname\": \"Doe\",\r\n    \"firstname\": \"John\",\r\n    \"email\": \"johndoe@example.com\",\r\n    \"phone\": \"123-456-7890\",\r\n    \"address\": \"123 Main St\",\r\n    \"zip\": \"12345\",\r\n    \"city\": \"Anytown\",\r\n    \"class\": \"1\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/Theo_Saelens_TP_API_Rest_sans_framework/student",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"Theo_Saelens_TP_API_Rest_sans_framework",
+						"student"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "patch class",
+			"request": {
+				"method": "PATCH",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "patch student",
+			"request": {
+				"method": "PATCH",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "put class",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"3\",\r\n    \"name\": \"Nouveau nom de la classe\",\r\n    \"level\": \"Nouveau niveau de la classe\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/Theo_Saelens_TP_API_Rest_sans_framework/classe/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"Theo_Saelens_TP_API_Rest_sans_framework",
+						"classe",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "put student",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"3\",\r\n    \"lastname\": \"Nouveau nom de famille de l'étudiant\",\r\n    \"firstname\": \"Nouveau prénom de l'étudiant\",\r\n    \"email\": \"nouveauemail@example.com\",\r\n    \"phone\": \"nouveaunumero\",\r\n    \"address\": \"Nouvelle adresse de l'étudiant\",\r\n    \"zip\": \"Nouveau code postal\",\r\n    \"city\": \"Nouvelle ville\",\r\n    \"class\": \"Nouvelle classe\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/Theo_Saelens_TP_API_Rest_sans_framework/student/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"Theo_Saelens_TP_API_Rest_sans_framework",
+						"student",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Authentification valide",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "motdepasse1",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "utilisateur1",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/Theo_Saelens_TP_API_Rest_sans_framework/classe",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"Theo_Saelens_TP_API_Rest_sans_framework",
+						"classe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Authentification invalide",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "motdepasse1",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "utilisateur1",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/Theo_Saelens_TP_API_Rest_sans_framework/classe",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"Theo_Saelens_TP_API_Rest_sans_framework",
+						"classe"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

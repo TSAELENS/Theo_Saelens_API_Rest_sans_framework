@@ -1,0 +1,6 @@
+id,lastname,firstname,email,phone,address,zip,city,class
+1,"Nouveau nom de famille de l'étudiant",Thierry,ThierryMichaud@jourrapide.com,05.95.70.45.85,"82 rue Porte d'Orange",81100,CASTRES,1
+2,Gousse,Florian,FlorianGousse@dayrep.com,03.21.38.71.44,"4 Avenue Millies Lacroix",59640,DUNKERQUE,2
+3,"Nouveau prénom de l'étudiant","Nouveau nom de famille de l'étudiant",nouveauemail@example.com,nouveaunumero,"Nouvelle adresse de l'étudiant","Nouveau code postal","Nouvelle ville",5
+4,Doe,John,johndoe@example.com,123-456-7890,"123 Main St",12345,Anytown,1
+5,Tricard,Jacques,jacqtric@gmail.com,03.21.38.85.45,"25 rue mauroy",59000,Lille,2

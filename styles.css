@@ -1,0 +1,157 @@
+/* Réinitialisation des styles par défaut du navigateur */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styles de base */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #0074d9;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Styles pour les formulaires */
+form {
+    background-color: white; /* Fond blanc */
+    border: 1px solid #ccc; /* Bordure grise */
+    padding: 20px; /* Espacement interne */
+    border-radius: 5px; /* Coins arrondis */
+    margin-top: 20px; /* Marge supérieure */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 5px;
+}
+/* Style pour les champs "email" et "téléphone" */
+input[type="email"],
+input[type="tel"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+/* Style pour la liste déroulante */
+select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+/* Liens */
+a {
+    display: inline-block;
+    background-color: #0074d9;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+a:hover {
+    background-color: #0074d9;
+}
+
+/* Résultats */
+pre {
+    background-color: white;
+    padding: 20px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 20px;
+    text-align: left;
+    margin-bottom: 20px;
+    overflow-y: auto; 
+}
+
+/* Ajouter de l'espace entre les colonnes du tableau */
+table {
+    border-collapse: separate;
+    border-spacing: 10px;
+
+}
+
+/* Style pour les cellules du tableau */
+table td {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+
+/* Style de la pop-up */
+#editClassFormContainer{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    display: none;
+}
+#editStudentFormContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    display: none;
+}
+/* Style de la croix pour la fermeture */
+.close-button {
+    position: absolute;
+    top: 10px; /* Ajustez la position en haut */
+    right: 10px; /* Ajustez la position à droite */
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Au survol, changez la couleur de la croix (facultatif) */
+.close-button:hover {
+    color: red;
+}
+
+
+
+

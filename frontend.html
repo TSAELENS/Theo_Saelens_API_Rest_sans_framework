@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>API Frontend</title>
+</head>
+<body>
+    <h1>API Frontend</h1>
+    <button id="docsLink">Accéder à la documentation de l'API</button>
+
+
+
+    <!-- Boutons pour afficher les classes et les étudiants -->
+    <button id="fetchClasses">Afficher les Classes</button>
+    <button id="fetchStudents">Afficher les Étudiants</button>
+
+    <!-- Zone de recherche de classe -->
+    <input type="text" id="classSearch" placeholder="Rechercher par ID (Classes)">
+    <button id="searchClass">Rechercher Classe</button>
+
+    <!-- Zone de recherche d'étudiant -->
+    <input type="text" id="studentSearch" placeholder="Rechercher par ID (Étudiants)">
+    <button id="searchStudent">Rechercher Étudiant</button>
+
+    <!-- Résultat de la recherche -->
+    <pre id="result"></pre>
+
+
+     <!-- Formulaire de Création de Classe -->
+     <div id="createClassDiv">
+        <h2>Créer une nouvelle classe</h2>
+        <form id="createClassForm">
+            <label for="className">Nom de la classe:</label>
+            <input type="text" id="className" name="name">
+            <label for="classLevel">Niveau de la classe:</label>
+            <input type="text" id="classLevel" name="level">
+            <button type="submit">Créer Classe</button>
+        </form>
+    </div>
+
+<!-- Formulaire de Création d'Étudiant -->
+<div id="createStudentDiv">
+    <h2>Créer un nouvel étudiant</h2>
+    <form id="createStudentForm">
+        <label for="studentLastname">Nom de l'étudiant:</label>
+        <input type="text" id="studentLastname" name="lastname" required>
+
+        <label for="studentFirstname">Prénom de l'étudiant:</label>
+        <input type="text" id="studentFirstname" name="firstname" required>
+
+        <label for="studentEmail">Email de l'étudiant:</label>
+        <input type="email" id="studentEmail" name="email" required>
+
+        <label for="studentPhone">Téléphone de l'étudiant:</label>
+        <input type="tel" id="studentPhone" name="phone" required>
+
+        <label for="studentAddress">Adresse de l'étudiant:</label>
+        <input type="text" id="studentAddress" name="address" required>
+
+        <label for="studentZip">Code postal de l'étudiant:</label>
+        <input type="text" id="studentZip" name="zip" required>
+
+        <label for="studentCity">Ville de l'étudiant:</label>
+        <input type="text" id="studentCity" name="city" required>
+
+        <label for="studentClass">Classe de l'étudiant:</label>
+        <select id="studentClass" name="class" required>
+        </select>
+
+        <button type="submit">Créer Étudiant</button>
+    </form>
+</div>
+
+<!-- Container de la pop-up de modification de classe -->
+<div id="editClassFormContainer">
+    <!-- Contenu de la pop-up -->
+    <div class="popup-content">
+        <span id="closeButtonClass" class="close-button" onclick="closePopup()">&times;</span> 
+        <h2>Modifier la classe</h2>
+        <form id="editClassForm">
+            <input type="hidden" id="editClassId" name="id">
+            <label for="editClassName">Nom de la classe:</label>
+            <input type="text" id="editClassName" name="name">
+            <label for="editClassLevel">Niveau de la classe:</label>
+            <input type="text" id="editClassLevel" name="level">
+            <button type="submit">Enregistrer les modifications</button>
+        </form>
+    </div>
+</div>
+
+
+
+
+<!-- Container de la pop-up de modification d'étudiant -->
+<div id="editStudentFormContainer">
+    <!-- Contenu de la pop-up -->
+    <div class="popup-content">
+        <span id="closeButtonStudent" class="close-button" onclick="closePopup()">&times;</span> 
+        <h2>Modifier l'étudiant</h2>
+        <form id="editStudentForm">
+            <input type="hidden" id="editStudentId" name="id">
+            <label for="editStudentFirstname">Prénom de l'étudiant:</label>
+            <input type="text" id="editStudentFirstname" name="firstname">
+            <label for="editStudentLastname">Nom de l'étudiant:</label>
+            <input type="text" id="editStudentLastname" name="lastname">
+            <label for="editStudentEmail">Email de l'étudiant:</label>
+            <input type="email" id="editStudentEmail" name="email">
+            <label for="editStudentPhone">Téléphone de l'étudiant:</label>
+            <input type="tel" id="editStudentPhone" name="phone">
+            <label for="editStudentAddress">Adresse de l'étudiant:</label>
+            <input type="text" id="editStudentAddress" name="address">
+            <label for="editStudentZip">Code postal de l'étudiant:</label>
+            <input type="text" id="editStudentZip" name="zip">
+            <label for="editStudentCity">Ville de l'étudiant:</label>
+            <input type="text" id="editStudentCity" name="city">
+            <label for="editStudentClass">Classe de l'étudiant:</label>
+            <select id="editStudentClass" name="class"></select>
+            <button type="submit">Enregistrer les modifications</button>
+        </form>
+    </div>
+</div>
+
+
+
+
+    <!-- Ajout d'un script pour gérer les interactions côté client -->
+    <script src="script.js"></script>
+</body>
+</html>

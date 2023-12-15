@@ -1,0 +1,241 @@
+openapi: 3.0.0
+info:
+  title: Theo_Saelens_API_sans_framework
+  version: 1.0.0
+servers:
+  - url: http://localhost/Theo_Saelens_TP_API_Rest_sans_framework
+  
+paths:
+  /classe:
+    get:
+      tags:
+        - Classe
+      summary: Get all classes
+      responses:
+        '200':
+          description: Successful response
+    post:
+      tags:
+        - Classe
+      summary: Create a new class
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Class'
+      responses:
+        '200':
+          description: Successful response
+
+  /classe/{id}:
+    get:
+      tags:
+        - Classe
+      summary: Get a class by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+    patch:
+      tags:
+        - Classe
+      summary: Partially update a class by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+    put:
+      tags:
+        - Classe
+      summary: Update a class by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Class'
+      responses:
+        '200':
+          description: Successful response
+
+  /student:
+    get:
+      tags:
+        - Student
+      summary: Get all students
+      responses:
+        '200':
+          description: Successful response
+    post:
+      tags:
+        - Student
+      summary: Create a new student
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Student'
+      responses:
+        '200':
+          description: Successful response
+
+  /student/{id}:
+    get:
+      tags:
+        - Student
+      summary: Get a student by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+    patch:
+      tags:
+        - Student
+      summary: Partially update a student by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+    put:
+      tags:
+        - Student
+      summary: Update a student by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Student'
+      responses:
+        '200':
+          description: Successful response
+  /authentification/valide:
+    get:
+      tags:
+        - Authentification
+      summary: Validate authentication
+      responses:
+        '200':
+          description: Authentication valid
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "Authentication successful"
+        '401':
+          description: Authentication invalid
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Invalid credentials"
+
+  /authentification/invalide:
+    get:
+      tags:
+        - Authentification
+      summary: Invalidate authentication
+      responses:
+        '200':
+          description: Authentication valid
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "Authentication successful"
+        '401':
+          description: Authentication invalid
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Invalid credentials"
+
+components:
+  schemas:
+    Class:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        level:
+          type: string
+    Student:
+      type: object
+      properties:
+        id:
+          type: string
+        lastname:
+          type: string
+        firstname:
+          type: string
+        email:
+          type: string
+        phone:
+          type: string
+        address:
+          type: string
+        zip:
+          type: string
+        city:
+          type: string
+        class:
+          type: string
+
+  
+tags:
+  - name: Classe
+    description: Operations related to classes
+  - name: Student
+    description: Operations related to students
+  - name: Authentification
+    description: Operations for authentication validation
+
